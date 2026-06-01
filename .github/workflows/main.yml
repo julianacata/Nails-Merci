@@ -11,5 +11,5 @@ jobs:
         run: ls -R
       - name: Etapa 3 - Executar Script
         run: |
-          chmod +x ./scripts/validar_projeto.sh
+          chmod +x ./scripts/validar_projetos.sh
           ./scripts/validar_projeto.sh
