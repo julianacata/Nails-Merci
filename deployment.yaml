@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nails-marci-deployment
+  labels:
+    app: nails-marci
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nails-marci
+  template:
+    metadata:
+      labels:
+        app: nails-marci
+    spec:
+      containers:
+      - name: nails-marci-app
+        image: buzuri/nails-merci:v1
+        ports:
+        - containerPort: 80
